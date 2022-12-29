@@ -6,7 +6,7 @@ import { ChatMessages } from '../components/ChatMessages';
 import { FormChat } from '../components/FormChat';
 import { Message } from '../interfaces/message_interface';
 
-const socket = io("http://192.168.0.101:8080/",{transports:["websocket"]});
+const socket = io("http://192.168.0.101:8080",{transports:["websocket"]});
 export const HomePage = () => {
     const {inputValueMessage,inputValueName,setInputValueMessage,onInputMessageChange,onInputNameChange} = usesockets();
     const [isConnected, setisConnected] = useState<boolean>();
